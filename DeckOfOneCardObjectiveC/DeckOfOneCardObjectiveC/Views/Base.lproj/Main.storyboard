@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GTTCardViewController" customModule="DeckOfOneCardObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCb-Uu-z75">
+                                <rect key="frame" x="32" y="143" width="350" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Please Draw a Card!">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QL-og-Lon">
+                                <rect key="frame" x="32" y="203" width="350" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3QL-og-Lon" secondAttribute="height" multiplier="2.5:3.5" id="P9R-XJ-UVt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azI-0i-r1k">
+                                <rect key="frame" x="67" y="725" width="280" height="45"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hAm-FV-qdF"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Draw a Card">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="20" name="Menlo-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="newCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdM-Z5-lIt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="azI-0i-r1k" firstAttribute="width" secondItem="3QL-og-Lon" secondAttribute="width" multiplier="0.8" id="5by-zN-leq"/>
+                            <constraint firstItem="3QL-og-Lon" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6JD-hI-qcc"/>
+                            <constraint firstItem="azI-0i-r1k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ht-Kl-l9q"/>
+                            <constraint firstItem="BCb-Uu-z75" firstAttribute="width" secondItem="3QL-og-Lon" secondAttribute="width" id="FPL-3I-RxF"/>
+                            <constraint firstItem="3QL-og-Lon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="LJn-Pb-SXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3QL-og-Lon" secondAttribute="trailing" constant="32" id="LXv-Pg-tgw"/>
+                            <constraint firstItem="BCb-Uu-z75" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="P5Y-mo-c5k"/>
+                            <constraint firstItem="3QL-og-Lon" firstAttribute="top" secondItem="BCb-Uu-z75" secondAttribute="bottom" constant="32" id="aR4-aV-vJc"/>
+                            <constraint firstItem="azI-0i-r1k" firstAttribute="top" secondItem="3QL-og-Lon" secondAttribute="bottom" constant="32" id="gxn-sp-GOB"/>
+                            <constraint firstItem="3QL-og-Lon" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wQX-fH-dED"/>
+                            <constraint firstItem="BCb-Uu-z75" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zoD-fV-6Ww"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="3QL-og-Lon" id="luZ-Me-29U"/>
+                        <outlet property="nameLabel" destination="BCb-Uu-z75" id="OJl-H1-WXw"/>
+                        <outlet property="newCardButton" destination="azI-0i-r1k" id="no2-bF-MfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
